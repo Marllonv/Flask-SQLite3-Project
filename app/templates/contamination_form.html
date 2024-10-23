@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Geladeira Inteligente - Detectar Contaminação</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/animal_form">Animal</a> |
+            <a href="/contamination_form">Contaminado</a> |
+            <a href="/personality_form">Personalidade</a>
+        </nav>
+    </header>
+    <h1>Geladeira Inteligente - Detectar Contaminação</h1>
+    <form action="/detect_contamination" method="POST">
+        <label for="temperature">Temperatura da geladeira:</label>
+        <select name="temperature" id="temperature" required>
+            <option value="low">Baixa</option>
+            <option value="normal">Normal</option>
+            <option value="high">Alta</option>
+        </select>
+        <br>
+        <label for="has_mold">Presença de mofo:</label>
+        <select name="has_mold" id="has_mold" required>
+            <option value="yes">Sim</option>
+            <option value="no">Não</option>
+        </select>
+        <br>
+        <label for="expired_food">Alimentos fora da validade:</label>
+        <select name="expired_food" id="expired_food" required>
+            <option value="yes">Sim</option>
+            <option value="no">Não</option>
+        </select>
+        <br>
+        <input type="submit" value="Detectar">
+    </form>
+</body>
+</html>

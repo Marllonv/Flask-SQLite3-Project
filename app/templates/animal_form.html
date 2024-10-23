@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Identificar Animal</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/animal_form">Animal</a> |
+            <a href="/contamination_form">Contaminado</a> |
+            <a href="/personality_form">Personalidade</a>
+        </nav>
+    </header>
+
+    <h1>Identificar Animal</h1>
+    <form action="/identify_animal" method="post">
+        <label for="color">Cor:</label>
+        <input type="text" id="color" name="color" required><br><br>
+        <label for="size">Tamanho:</label>
+        <input type="text" id="size" name="size" required><br><br>
+        <label for="sound">Som:</label>
+        <input type="text" id="sound" name="sound" required><br><br>
+        <input type="submit" value="Identificar">
+    </form>
+</body>
+</html>
