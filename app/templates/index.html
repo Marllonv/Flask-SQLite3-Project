@@ -3,16 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="../static/CSS/index.css">
+    {% block title %}
     <title>Página Home</title>
+    {% endblock %}
 </head>
 <body>
     <header>
         <nav>
-            <a href="/animal_form">Animal</a> |
-            <a href="/contamination_form">Contaminado</a> |
-            <a href="/personality_form">Personalidade</a>
-        </nav>
+            <div class="nav-logo">Página do <span>B</span>olsa<span>N</span>ota</div>
+            <ul class="nav-li">
+                <li><a href="/animal_form" class="nav-btn">Animal</a></li>
+                <li><a href="/contamination_form" class="nav-btn">Contaminado</a></li>
+                <li><a href="/personality_form" class="nav-btn">Personalidade</a></li>
+            </ul>
+        </nav>  
     </header>
+    <main>
+        <section>
+            {% block conteudo %}
+                <h1>Página Home dessa Bomba</h1>
+            {% endblock %}
+        </section>
+    </main>
 </body>
 </html>

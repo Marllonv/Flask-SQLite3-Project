@@ -1,0 +1,67 @@
+@import url(section.css);
+
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #999;
+    height: 60px;
+    border-bottom: 2px solid black;
+}
+
+nav .nav-logo {
+    display: inline;
+    margin-left: 5%;
+    color:  black;
+    font-weight: bolder;
+    text-decoration: overline black;
+    font-size: 1.8rem;
+}
+
+nav .nav-logo span {
+    color: aliceblue;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin-right: 5%;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    border-radius: 10px;
+    border: 1px solid black;
+    padding: 10px;
+    background-color: white;
+}
+
+nav a:hover {
+    background-color: rgb(240, 100, 240);
+}
+
+main {
+    display: grid;
+    justify-content: center;
+    background-color: rgba(240, 100, 240, 0.295);
+    height: 100vh;
+}
+
+section {
+    padding: 50px 100px 50px 50px;
+    background-color: white;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    width: 900px;
+    filter: drop-shadow(5px 10px 10px rgba(153, 48, 153, 0.747));
+}

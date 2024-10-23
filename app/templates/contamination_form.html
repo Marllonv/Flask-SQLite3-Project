@@ -1,38 +1,38 @@
-<!DOCTYPE html>
-<html>
-<head>
+{% extends "index.html" %}
+
+{% block title %}
     <title>Geladeira Inteligente - Detectar Contaminação</title>
-</head>
-<body>
-    <header>
-        <nav>
-            <a href="/animal_form">Animal</a> |
-            <a href="/contamination_form">Contaminado</a> |
-            <a href="/personality_form">Personalidade</a>
-        </nav>
-    </header>
+{% endblock %}
+
+{% block conteudo %}
     <h1>Geladeira Inteligente - Detectar Contaminação</h1>
     <form action="/detect_contamination" method="POST">
         <label for="temperature">Temperatura da geladeira:</label>
-        <select name="temperature" id="temperature" required>
+        <select class="label" name="temperature" id="temperature" required>
             <option value="low">Baixa</option>
             <option value="normal">Normal</option>
             <option value="high">Alta</option>
+            <option value="very-high">Quente</option>
         </select>
         <br>
         <label for="has_mold">Presença de mofo:</label>
-        <select name="has_mold" id="has_mold" required>
+        <select class="label" name="has_mold" id="has_mold" required>
             <option value="yes">Sim</option>
             <option value="no">Não</option>
         </select>
         <br>
         <label for="expired_food">Alimentos fora da validade:</label>
-        <select name="expired_food" id="expired_food" required>
+        <select class="label" name="expired_food" id="expired_food" required>
             <option value="yes">Sim</option>
             <option value="no">Não</option>
         </select>
         <br>
-        <input type="submit" value="Detectar">
+        <label for="has_insects">Presença de insetos:</label>
+        <select class="label" name="has_insects" id="has_insects" required>
+            <option value="yes">Sim</option>
+            <option value="no">Não</option>
+        </select>
+        <br>
+        <input class="submit-btn" type="submit" value="Detectar">
     </form>
-</body>
-</html>
+{% endblock %}

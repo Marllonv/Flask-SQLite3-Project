@@ -1,0 +1,45 @@
+section h1 {
+    justify-self: center;
+    font-size: 2rem;
+    margin: 20px;
+    margin-bottom: 50px;
+}
+
+.content{
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    font-size: 1.2rem;
+}
+
+.content input[type="text"] {
+    padding: 5px;
+    border-radius: 10px;
+    border: 1px solid black;
+    margin-bottom: 10px;
+}
+
+.submit-btn {
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 1rem;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.submit-btn:hover {
+    background-color: rgb(240, 100, 240);
+    cursor: pointer;
+}
+
+.label {
+    margin-bottom: 20px;
+}
+
+.resultado {
+    font-size: 1.5rem;
+    color: red;
+    margin: 10px;
+    font-weight: bolder;
+}

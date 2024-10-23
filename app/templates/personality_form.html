@@ -1,46 +1,40 @@
-<!DOCTYPE html>
-<html>
-<head>
+{% extends "index.html" %}
+
+{% block title %}
     <title>Análise de Personalidade</title>
-</head>
-<body>
-    <header>
-        <nav>
-            <a href="/animal_form">Animal</a> |
-            <a href="/contamination_form">Contaminado</a> |
-            <a href="/personality_form">Personalidade</a>
-        </nav>
-    </header>
+{% endblock %}
+
+{% block conteudo %}
     <h1>Análise de Personalidade</h1>
     <form action="/analyze_personality" method="post">
-        <label for="name">Nome:</label>
-        <input type="text" name="name" id="name" required><br>
-        <label for="age">Idade:</label>
-        <input type="number" name="age" id="age" required><br>
-        <label for="movie_genre">Gênero de filmes favorito:</label>
-        <select name="movie_genre" id="movie_genre" required>
+        <label class="label" for="name">Nome:</label>
+        <input class="label" type="text" name="name" id="name" required><br>
+        <label class="label" for="age">Idade:</label>
+        <input class="label" type="number" name="age" id="age" required><br>
+        <label class="label" for="movie_genre">Gênero de filmes favorito:</label>
+        <select class="label" name="movie_genre" id="movie_genre" required>
             <option value="terror">Terror</option>
             <option value="suspense">Suspense</option>
             <option value="comédia">Comédia</option>
             <option value="ação">Ação</option>
         </select><br>
-        <label for="likes_studying">Gosta de estudar?</label>
-        <select name="likes_studying" id="likes_studying" required>
+        <label class="label" for="likes_studying">Gosta de estudar?</label>
+        <select class="label" name="likes_studying" id="likes_studying" required>
             <option value="sim">Sim</option>
             <option value="não">Não</option>
         </select><br>
-        <label for="programming_language">Linguagem de programação preferida:</label>
-        <select name="programming_language" id="programming_language" required>
+        <label class="label" for="programming_language">Linguagem de programação preferida:</label>
+        <select class="label" name="programming_language" id="programming_language" required>
             <option value="Python">Python</option>
             <option value="Java">Java</option>
             <option value="C">C</option>
+            <option value="Assembly">Assembly</option>
         </select><br>
-        <label for="likes_beach">Gosta de praia?</label>
-        <select name="likes_beach" id="likes_beach" required>
+        <label class="label" for="likes_beach">Gosta de praia?</label>
+        <select class="label" name="likes_beach" id="likes_beach" required>
             <option value="sim">Sim</option>
             <option value="não">Não</option>
         </select><br>
-        <input type="submit" value="Analisar">
+        <input class="submit-btn" type="submit" value="Analisar">
     </form>
-</body>
-</html>
+{% endblock %}

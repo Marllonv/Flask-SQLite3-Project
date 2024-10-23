@@ -25,6 +25,14 @@ def indentifyAnimal():
         animal = 'cachorro'
     elif color == 'cinza' and size == 'pequeno' and sound == 'miado':
         animal = 'gato'
+    elif color == 'cinza' and size == 'gigante' and sound == 'bramido':
+        animal = 'elefante'
+    elif color == 'verde' and size == 'pequeno' and sound == 'sibilo':
+        animal = 'serpente'
+    elif color == 'colorido' and size == 'pequeno' and sound == 'canto':
+        animal = 'pássaro'
+    elif color == 'lindo' and size == 'perfeito' and sound == 'perfeito':
+        animal = 'capybara'
     else:
         animal = 'desconhecido'
     
@@ -48,17 +56,23 @@ def detect_contamination():
     temperature = request.form['temperature']
     has_mold = request.form['has_mold']
     expired_food = request.form['expired_food']
+    has_insects = request.form['has_insects']
 
     if temperature == 'high':
         result = 'Temperatura alta. Risco de contaminação!'
+    elif temperature == 'very-high':
+        result = 'Temperatura extremamente alta. É um fogão.'
     elif has_mold == 'yes':
         result = 'Presença de mofo detectada. Ação necessária!'
     elif expired_food == 'yes':
         result = 'Alimentos fora da validade. Risco de contaminação!'
+    elif has_insects == 'yes':
+        result = 'Presença de insetos. Risco de contaminação!'
     else:
         result = 'A geladeira está limpa. Nenhuma contaminação detectada.'
         
-        # CONFIGURAÇÃO DO SQLITE3
+    # CONFIGURAÇÃO DO SQLITE3
+    
     conn1 = sqlite3.connect('table.db')
     cursor1 = conn1.cursor()
     
@@ -90,9 +104,15 @@ def analyze_personality():
         personality = 'positiva'
     elif movie_genre in ['comédia', 'ação'] and programming_language == 'Python' and likes_studying == 'não' and likes_beach == 'não':
         personality = 'sem sal'
+    elif movie_genre in ['terror', 'suspense'] and programming_language == 'C' and likes_studying == 'sim' and likes_beach == 'não':
+        personality = 'sem coração'
+    elif movie_genre in ['terror', 'ação'] and programming_language == 'Assembly' and likes_studying == 'não' and likes_beach == 'não':
+        personality = 'sem alma'
     else:
         personality = 'mal humorada'
         
+    # CONFIGURAÇÃO DO SQLITE3
+    
     conn1 = sqlite3.connect('table.db')
     cursor1 = conn1.cursor()
     
